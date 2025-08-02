@@ -4,7 +4,7 @@
 > Here, I tried to make a fun, mini Instamart/FreshMart e-grocery store — with add/remove, images, product cards, and a running cart total.  
 > I’m a React beginner and this was built while experimenting and learning how modern web apps work!
 
-## 🚀 What does it do?
+## What does it do?
 
 - Displays fruit products as beautiful cards (with images)
 - Lets you increment/decrement product quantities (never goes below zero!)
@@ -12,9 +12,9 @@
 - Responsive (grid adjusts for mobile/desktop)
 - Styled with Bootstrap and custom CSS
 
-## 🖼️ Screenshot
+## Screenshot
 
-![FreshMart React Project](public/images/AppPreview.png How it works (Component Flow)
+![FreshMart React Project](public/images/AppPreview.png) How it works (Component Flow)
 
 ## ✨ How it works (Component Flow)
 
@@ -78,14 +78,5 @@
 - Passing event handlers via props (`incrementQuantity`, `decrementQuantity`)
 - Handling images and public/static files in React
 - Using Bootstrap for responsive, real-world web layouts
-
-## 💡 Next Steps
-
-- Add routing (pages for cart, checkout)
-- Store cart in localStorage
-- Add login or user profile
-- Connect to a backend/server for products
-
-> Built while learning — your suggestions to improve are welcome! 😊
 
 **_FreshMart — My First React E-Commerce UI_**
