@@ -5,7 +5,7 @@ class Navbar extends Component {
     return (
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <a className="navbar-brand" href="#">
-          Instamart Clone
+          FreshMart
         </a>
       </nav>
     );
