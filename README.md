@@ -1,70 +1,91 @@
-# Getting Started with Create React App
+# FreshMart 🛒🍎🍌
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> This is my first ever React.js project!  
+> Here, I tried to make a fun, mini Instamart/FreshMart e-grocery store — with add/remove, images, product cards, and a running cart total.  
+> I’m a React beginner and this was built while experimenting and learning how modern web apps work!
 
-## Available Scripts
+## 🚀 What does it do?
 
-In the project directory, you can run:
+- Displays fruit products as beautiful cards (with images)
+- Lets you increment/decrement product quantities (never goes below zero!)
+- Shows each item's total and a sticky cart total at the bottom
+- Responsive (grid adjusts for mobile/desktop)
+- Styled with Bootstrap and custom CSS
 
-### `npm start`
+## 🖼️ Screenshot
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+![FreshMart React Project](public/images/AppPreview.png How it works (Component Flow)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## ✨ How it works (Component Flow)
 
-### `npm test`
+```
++--------+           +--------------+         +----------+
+| Navbar |           |  ProductList |         |  Footer  |
++--------+           +--------------+         +----------+
+                        |   ^
+          props         |   | props
+                        v   |
+                   +-----------------+
+                   |    Product      |
+                   +-----------------+
+                   | img, name, qty  |
+                   | + and - buttons |
+                   +-----------------+
+                        |
+              updates quantity via props
+                        |
+                   +---------+
+                   |  Cart   |
+                   +---------+
+        (shows total below the grid)
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- `App.js` is the parent — it manages state, passes products and handler functions (add/remove).
+- `ProductList` receives the data and maps each product to a `Product` card.
+- `Product` cards let user change quantities.
+- The cart total updates automatically.
 
-### `npm run build`
+## 🛠️ How to run this project (Step-by-step)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. **Clone or download the repo**  
+   ```bash
+   git clone https://github.com/your-github-username/freshmart.git
+   cd freshmart
+   ```
+2. **Install dependencies (React, Bootstrap — comes with Create React App)**
+   ```bash
+   npm install
+   ```
+3. **Add product images**  
+   - Create a folder: `public/images/`
+   - Add images named: `apple.jpg`, `banana.jpg`, `orange.jpg`, `mango.jpg`, `grapes.jpg`, `pineapple.jpg`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4. **Start the app locally**
+   ```bash
+   npm start
+   ```
+   - Then open your browser to [http://localhost:3000](http://localhost:3000)
+   - You should see the FreshMart page just like the screenshot above!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+5. **Optional: Customization**
+   - Edit `App.js` to change products or prices
+   - Edit `components/Product.js` & `App.css` or `Product.css` for new styles or layouts
 
-### `npm run eject`
+## 🎓 What I learned
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Basics of React components, props, and state
+- How to map over data and render lists
+- Passing event handlers via props (`incrementQuantity`, `decrementQuantity`)
+- Handling images and public/static files in React
+- Using Bootstrap for responsive, real-world web layouts
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 💡 Next Steps
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Add routing (pages for cart, checkout)
+- Store cart in localStorage
+- Add login or user profile
+- Connect to a backend/server for products
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+> Built while learning — your suggestions to improve are welcome! 😊
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**_FreshMart — My First React E-Commerce UI_**
